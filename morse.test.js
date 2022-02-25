@@ -7,17 +7,6 @@ import {
 
 // import {multiply} from "./sums";
 
-describe("Multiply function tests", () => {
-  it("Multiplies 5 and 2 to equal 10", () => {
-    const result = multiply(5, 2);
-    expect(result).toBe(10)
-  });
-  it("Multiplies 10 and 10 to equal 100", () => {
-    const result = multiply(10, 10);
-    expect(result).toBe(100)
-  });
-
-})
 
 
 

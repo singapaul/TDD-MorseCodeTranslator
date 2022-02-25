@@ -32,15 +32,13 @@ body {
     margin: 5% 0;
   }
 
-  &__submit {
-    display: block;
+  &__submit, &__reset {
+    display: inline;
     width: 30%;
     padding: 2% 0;
     margin: 5% 0;
-
   }
-
-  ;
+;
 
   &__display {
     width: 90%;
@@ -49,10 +47,7 @@ body {
     padding: 2% 0;
     margin: 5% 0;
   }
-
   ;
-
-
 }
 
 .footer {

@@ -11,6 +11,8 @@ const translateButtonPress = document.querySelector(".morseCodeContainer__submit
 const englishToTranslate = document.querySelector(".morseCodeContainer__inputField");
 // getting the output of the function to print to the display
 const translationToDisplay = document.querySelector(".morseCodeContainer__display");
+// getting the reset button
+const resetButton = document.querySelector(".morseCodeContainer__reset");
 
 
 // This line will remove any spaces and replace with a /
@@ -47,11 +49,20 @@ const cleanEnglishStringToMorse = (string) => {
   return translatedArray.join("")
 }
 
-// On button press we update our results with the below text
+// On translate button press we update our results with the below text
 const translateMorsetoEnglishFunction = () => {
   // const textToDisplay = translateFunctionIneedtowrite();
   translationToDisplay.innerText = cleanEnglishStringToMorse(englishToTranslate.value);
 }
 
+// On reset button press clear in the input and results screen
+const resetPress = () => {
+  englishToTranslate.value = "";
+  translationToDisplay.innerText = "";
+
+}
+
 // On button press we run our translate function 
 translateButtonPress.addEventListener("click", translateMorsetoEnglishFunction);
+// On button we run our reset function
+resetButton.addEventListener("click", resetPress);
