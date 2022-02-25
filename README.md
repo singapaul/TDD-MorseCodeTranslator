@@ -9,4 +9,4 @@ https://singapaul.github.io/TDD-MorseCodeTranslator/
 Current improvements to make:
 
 -style further with CSS
--make ir translate morsecode to English! 
+-make it translate morsecode to English! 
