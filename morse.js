@@ -1,8 +1,6 @@
-console.log("Hello Daddy");
 import {
   dictionary
 } from "./objects/dictionary.js"
-console.log(dictionary);
 
 // defining constants
 
@@ -30,19 +28,14 @@ const cleanInputString = (string) => {
   const cleanString = toCapitalCase(stringToManipulate);
   return cleanString
 };
-// Function to rejoin array into string
-
-
 
 
 const cleanEnglishStringToMorse = (string) => {
   // This will look through every item in the string and map it based on the value
   // split the string into each character, the use map, then use join
   const stringInput = cleanInputString(string);
-  console.log(stringInput);
   // split the string
   const stringIn = stringInput.split('');
-  console.log(stringIn);
   
   // translate the string using map function 
   const translatedArray = stringIn.map(letter => {
@@ -53,24 +46,19 @@ const cleanEnglishStringToMorse = (string) => {
       return "/"
     }
   })
-  console.log(translatedArray);
+
+  return translatedArray.join("")
   // now we need to rejoin the string with a join function
 }
-cleanEnglishStringToMorse("jkjewew eflkew Hello")
-
 
 // write the function that happens when you press the button
 const translateMorsetoEnglishFunction = () => {
   // use .value to get the value out of the system 
   console.log(englishToTranslate.value)
-
   // now we want to 1) run the translate function on our string
   // const textToDisplay = translateFunctionIneedtowrite();
-
   translationToDisplay.innerText = "The string result variable will be assigned here"
-
 }
-
 
 // On button press we run our translate function 
 translateButtonPress.addEventListener("click", translateMorsetoEnglishFunction);
