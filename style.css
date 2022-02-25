@@ -46,5 +46,17 @@ body {
 }
 
 .footer {
-  height: 5vh;
+  width: 90%;
+}
+.footer-contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-top: 2px solid black;
+}
+.footer-contents ul a {
+  text-decoration: none;
+  color: black;
 }

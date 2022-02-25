@@ -4,53 +4,52 @@ import {
   describe
 } from "@jest/globals";
 //Write test for morse code function 
-
-// import {multiply} from "./sums";
-
-
-
-
+import {
+  spaceToString
+} from "./function.js"
+import {
+  toCapitalCase
+} from "./function.js"
+import {
+  cleanInputString
+} from "./function.js"
+import {
+  cleanEnglishStringToMorse
+} from "./function.js"
 
 describe("The Morse Code test suite", () => {
   //Write our postive tests: 
+  it("Checks the input is converted to /", () => {
+    //Write tests in here 
+    const result = spaceToString("hello world");
+    expect(result).toStrictEqual("hello/world");
+  })
 
   it("Checks the input entered is valid", () => {
     //Write tests in here 
-    const result = englishToMorse("hello world");
-    expect(result).toStrictEqual(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
-  });
-  it("Checks the input entered is not case sensitive", () => {
+    const result = cleanEnglishStringToMorse("HELLO/WORLD");
+    expect(result).toStrictEqual("...... - ... - ..---/.-----. - .. - ..-..");
+  })
+
+  it("Checks the input is uppercase", () => {
     //Write tests in here 
-    const result = englishToMorse("HELLO WORLD");
-    expect(result).toStrictEqual(".... . .-.. .-.. --- / .-- --- .-. .-.. -..");
-  });
-  it("Checks the input entered valid", () => {
-    //Write tests in here 
-    const result = englishToMorse("morse code is awesome");
-    expect(result).toStrictEqual("-- --- .-. ... . / -.-. --- -.. . / .. ... / .- .-- . ... --- -- .");
-  });
-  it("Checks for a single letter input", () => {
-    //Write tests in here 
-    const result = englishToMorse("a");
-    expect(result).toStrictEqual(".-");
-  });
-  it("Checks for a single letter input", () => {
-    //Write tests in here 
-    const result = englishToMorse("z");
-    expect(result).toStrictEqual("--..");
-  });
-  it("Checks for a numerical input", () => {
-    //Write tests in here 
-    const result = englishToMorse("19141952");
-    expect(result).toStrictEqual(".---- ----. .---- ....- .---- ----. ..... ..---");
+    const result = toCapitalCase("helloworld");
+    expect(result).toStrictEqual("HELLOWORLD");
   });
 
-  // negative tests for edge cases
-
-  it("Checks the filter works correctly and removes symbols from string if pressed accidentally", () => {
-    //Write tests in here - This test needs massively rethinking! 
-    const result = englishToMorse("morse@%code!is:awesome");
-    expect(result).toStrictEqual("-- --- .-. ... . / -.-. --- -.. . / .. ... / .- .-- . ... --- -- .");
+  it("Checks the input string is ready for translation", () => {
+    //Write tests in here 
+    const result = cleanInputString("hello world");
+    expect(result).toStrictEqual("HELLO/WORLD");
   });
 
 })
+
+// test for numbers
+// negative tests for edge cases
+
+// it("Checks the filter works correctly and removes symbols from string if pressed accidentally", () => {
+//   //Write tests in here - This test needs massively rethinking! 
+//   const result = englishToMorse("morse@%code!is:awesome");
+//   expect(result).toStrictEqual("-- --- .-. ... . / -.-. --- -.. . / .. ... / .- .-- . ... --- -- .");
+// });
