@@ -14,37 +14,63 @@ const englishToTranslate = document.querySelector(".morseCodeContainer__inputFie
 const translationToDisplay = document.querySelector(".morseCodeContainer__display");
 
 
-// The pseudocode is 
-
 // This line will remove any spaces and replace with a /
 
 const spaceToString = (string) => {
-  return string.replace(/\s\s+/g, '/');
+  // a single s on it's own will pick up all whitespace - whereas /s/s will only pickup when there is more than 2 spaces 
+  return string.replace(/\s/g, '/');
 }
-
 // This line will convert all text to uppercase;
-
 const toCapitalCase = (string) => {
   return string.toUpperCase();
 };
+// This tidies up the clean string functions
+const cleanInputString = (string) => {
+  const stringToManipulate = spaceToString(string);
+  const cleanString = toCapitalCase(stringToManipulate);
+  return cleanString
+};
+// Function to rejoin array into string
 
 
-// on submit form button press 1) console log hello 2) console log input contents 
 
 
+const cleanEnglishStringToMorse = (string) => {
+  // This will look through every item in the string and map it based on the value
+  // split the string into each character, the use map, then use join
+  const stringInput = cleanInputString(string);
+  console.log(stringInput);
+  // split the string
+  const stringIn = stringInput.split('');
+  console.log(stringIn);
+  
+  // translate the string using map function 
+  const translatedArray = stringIn.map(letter => {
+    // return sweetItem+"A"
+    if (dictionary[letter] !== undefined) {
+      return dictionary[letter];
+    } else {
+      return "/"
+    }
+  })
+  console.log(translatedArray);
+  // now we need to rejoin the string with a join function
+}
+cleanEnglishStringToMorse("jkjewew eflkew Hello")
 
 
 // write the function that happens when you press the button
 const translateMorsetoEnglishFunction = () => {
- // use .value to get the value out of the system 
-console.log(englishToTranslate.value)
+  // use .value to get the value out of the system 
+  console.log(englishToTranslate.value)
 
   // now we want to 1) run the translate function on our string
   // const textToDisplay = translateFunctionIneedtowrite();
-  // 2) we want to print the result to the display below
+
   translationToDisplay.innerText = "The string result variable will be assigned here"
 
 }
-// write the add click event listener to the button and attach the function 
 
+
+// On button press we run our translate function 
 translateButtonPress.addEventListener("click", translateMorsetoEnglishFunction);
