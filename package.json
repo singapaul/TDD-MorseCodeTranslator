@@ -1,0 +1,22 @@
+{
+  "name": "tdd-morsecodetranslator",
+  "version": "1.0.0",
+  "description": "a morse code translator for english to morse and back again",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singapaul/TDD-MorseCodeTranslator.git"
+  },
+  "author": "Paul Hardman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singapaul/TDD-MorseCodeTranslator/issues"
+  },
+  "homepage": "https://github.com/singapaul/TDD-MorseCodeTranslator#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
