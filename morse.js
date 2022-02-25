@@ -5,16 +5,16 @@
 
 import {
   spaceToString
-} from "./morse";
+} from "./function.js";
 import {
   toCapitalCase
-} from "./morse";
+} from "./function.js";
 import {
   cleanEnglishStringToMorse
-} from "./morse";
+} from "./function.js";
 import {
   cleanInputString
-} from "./morse";
+} from "./function.js";
 
 
 // defining the button areas
