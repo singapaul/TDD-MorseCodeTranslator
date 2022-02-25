@@ -1,8 +1,9 @@
+// importing the dictionary of key values
 import {
   dictionary
 } from "./objects/dictionary.js"
 
-// defining constants
+// defining the button areas
 
 // define the button element in the document with a queryselector
 const translateButtonPress = document.querySelector(".morseCodeContainer__submit");
@@ -13,29 +14,28 @@ const translationToDisplay = document.querySelector(".morseCodeContainer__displa
 
 
 // This line will remove any spaces and replace with a /
-
 const spaceToString = (string) => {
   // a single s on it's own will pick up all whitespace - whereas /s/s will only pickup when there is more than 2 spaces 
   return string.replace(/\s/g, '/');
 }
-// This line will convert all text to uppercase;
+// This function will convert all text to uppercase;
 const toCapitalCase = (string) => {
   return string.toUpperCase();
 };
-// This tidies up the clean string functions
+// This tidies up the clean string functions, by it calls the capitalise and space removal functions
 const cleanInputString = (string) => {
   const stringToManipulate = spaceToString(string);
   const cleanString = toCapitalCase(stringToManipulate);
   return cleanString
 };
 
+// Main function which takes in string and translates into morse code
 const cleanEnglishStringToMorse = (string) => {
-  // This will look through every item in the string and map it based on the value
-  // split the string into each character, the use map, then use join
+  // clean and standardize the input array
   const stringInput = cleanInputString(string);
-  // split the string
+  // split the string into an array by character
   const stringIn = stringInput.split('');
-  // translate the string using map function 
+  // translate the string using map function and dictionary obeject
   const translatedArray = stringIn.map(letter => {
     if (dictionary[letter] !== undefined) {
       return dictionary[letter];
@@ -43,16 +43,12 @@ const cleanEnglishStringToMorse = (string) => {
       return "/"
     }
   })
-// return the rejoined string
+  // join the letters back into single string and return result
   return translatedArray.join("")
 }
 
-// write the function that happens when you press the button
+// On button press we update our results with the below text
 const translateMorsetoEnglishFunction = () => {
-  // use .value to get the value out of the system 
-  
-
-  // now we want to 1) run the translate function on our string
   // const textToDisplay = translateFunctionIneedtowrite();
   translationToDisplay.innerText = cleanEnglishStringToMorse(englishToTranslate.value);
 }
