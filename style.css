@@ -60,3 +60,51 @@ body {
   text-decoration: none;
   color: black;
 }
+
+.MorseToEnglishBox {
+  background-color: aqua;
+  width: 400px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MorseToEnglishBox h1 {
+  text-align: center;
+  margin: 5% 0;
+}
+.MorseToEnglishBox__inputField {
+  width: 90%;
+  height: 30px;
+  padding: 2% 0;
+  margin: 5% 0;
+}
+.MorseToEnglishBox__submit, .MorseToEnglishBox__reset {
+  display: inline;
+  width: 30%;
+  padding: 2% 0;
+  margin: 5% 0;
+}
+.MorseToEnglishBox__display {
+  width: 90%;
+  height: 30vh;
+  background-color: white;
+  padding: 2% 0;
+  margin: 5% 0;
+}
+
+.footer {
+  width: 90%;
+}
+.footer-contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-top: 2px solid black;
+}
+.footer-contents ul a {
+  text-decoration: none;
+  color: black;
+}
