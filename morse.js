@@ -33,6 +33,9 @@ const morseToEnglishInputFieldBox = document.querySelector(
 const morseToEnglishSubmit = document.querySelector(
   ".MorseToEnglishBox__submit"
 );
+const MorseCodeBackground = document.querySelector(".backgroundMorse");
+const TextBackground = document.querySelector(".background");
+
 const translateMorsetoEnglishFunction = () => {
   translationToDisplay.innerText = cleanEnglishStringToMorse(
     englishToTranslate.value
@@ -42,7 +45,8 @@ const resetPress = () => {
   englishToTranslate.value = "";
   translationToDisplay.innerText = "";
   morseToEnglishInputFieldBox.value = "";
-  morseToEnglishDisplay.innerHTML = "<p style=opacity:0.6;>Seperate words with a '/' and letters with a space</p>";
+  morseToEnglishDisplay.innerHTML =
+    "<p style=opacity:0.6;>Seperate words with a '/' and letters with a space</p>";
 };
 const translateEnglishtoMorseFunction = () => {
   morseToEnglishDisplay.innerText = cleanMorseToEnglish(
@@ -53,15 +57,22 @@ const translateEnglishtoMorseFunction = () => {
 const encryptFunction = () => {
   EnglishToMorseContainer.classList.remove("absolute");
   morseToEnglishContainer.classList.add("absolute");
+  MorseCodeBackground.classList.remove("invisibleBackground");
+  TextBackground.classList.add("invisibleBackground");
 };
 const decryptFunction = () => {
   morseToEnglishContainer.classList.remove("absolute");
   EnglishToMorseContainer.classList.add("absolute");
+  MorseCodeBackground.classList.add("invisibleBackground");
+  TextBackground.classList.remove("invisibleBackground");
 };
 // on load
 morseToEnglishContainer.classList.add("absolute");
 EnglishToMorseContainer.classList.remove("absolute");
-morseToEnglishDisplay.innerHTML = "<p style=opacity:0.6;>Seperate words with a '/' and letters with a space</p>"
+morseToEnglishDisplay.innerHTML =
+  "<p style=opacity:0.6;>Seperate words with a '/' and letters with a space</p>";
+MorseCodeBackground.classList.add("invisibleBackground");
+TextBackground.classList.add("invisibleBackground")
 
 // buttons
 morseToEnglishSubmit.addEventListener("click", translateEnglishtoMorseFunction);
