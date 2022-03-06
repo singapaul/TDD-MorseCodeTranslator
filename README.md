@@ -8,5 +8,6 @@ https://singapaul.github.io/TDD-MorseCodeTranslator/
 
 Current improvements to make:
 
--style further with CSS
--make it translate morsecode to English! 
+-Clean up notation in CSS with BEM
+-Add Javascript to make typewriter effect
+-Add further jest testing to output
