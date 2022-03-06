@@ -142,10 +142,10 @@ body {
   padding: 1% 5%;
   margin: 3%;
   border-top: 2px solid black;
+  font-size: 1.5em;
 }
 .footer-contents ul a {
-  text-decoration: none;
-  color: black;
+  padding: 0 5px;
 }
 
 .absolute {
@@ -256,24 +256,25 @@ body {
   background-color: #c2c2c2;
 }
 
-.footer {
-  width: 90%;
-}
 .footer-contents {
-  background-color: white;
   font-family: "Special Elite", cursive;
+  font-weight: bold;
 }
 .footer-contents ul a {
   text-decoration: none;
   color: black;
 }
 
+.hotLinks:hover {
+  color: red;
+}
+
 .background {
   font-family: "Special Elite", cursive;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .backgroundMorse {
   font-family: "Special Elite", cursive;
-  opacity: 0.4;
+  opacity: 0.2;
 }
