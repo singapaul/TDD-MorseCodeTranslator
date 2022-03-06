@@ -1,50 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse code machine</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The mighty morse code machine</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="translate">
+      <div class="morseCodeContainer">
+        <h1>Translate English to Morse</h1>
+        <input
+          class="morseCodeContainer__inputField"
+          placeholder="Your message here..."
+          type="text"
+        />
+        <div class="buttonDiv">
+          <button class="morseCodeContainer__submit" type="submit">
+            Translate
+          </button>
+          <button class="morseCodeContainer__reset">Reset</button>
+          <button class="morseCodeContainer__Decrypt">Decrypt</button>
+        </div>
 
-<body>
+        <div class="morseCodeContainer__display"></div>
+      </div>
 
-
-  <div class="morseCodeContainer">
-    <h1>Translate English to Morse</h1>
-    <input class="morseCodeContainer__inputField" type="text">
-    <button class="morseCodeContainer__submit" type="submit">Translate</button>
-    <button class="morseCodeContainer__reset">Reset</button>
-    <button class="morseCodeContainer__Decrypt">Decrypt</button>
-    <div class="morseCodeContainer__display"></div>
-  </div>
-
-  <div class="MorseToEnglishBox">
-    <h1>Translate Morse to English</h1>
-    <input class="MorseToEnglishBox__inputField" type="text">
-    <button class="MorseToEnglishBox__submit" type="submit">Translate</button>
-    <button class="MorseToEnglishBox__reset">Reset</button>
-    <button class="MorseToEnglishBox__encrypt">Encrypt</button>
-    <div class="MorseToEnglishBox__display"></div>
-  </div>
-
-
-
-  <footer class="footer">
-    <div class="footer-contents">
-      <div>Made by Paul Hardman 2022</div>
-      <ul>
-        <a href="https://www.linkedin.com/in/paul-hardman-1199b6108/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/singapaul" target="_blank">Github</a>
-      </ul>
+      <div class="MorseToEnglishBox">
+        <h1>Translate Morse to English</h1>
+        <input
+          class="MorseToEnglishBox__inputField"
+          placeholder="Your secret message here"
+          type="text"
+        />
+        <div class="buttonDiv">
+          <button class="MorseToEnglishBox__submit" type="submit">
+            Translate
+          </button>
+          <button id="MorseToEnglishBox__reset">Reset</button>
+          <button class="MorseToEnglishBox__encrypt">Encrypt</button>
+        </div>
+        <div class="MorseToEnglishBox__display"></div>
+      </div>
     </div>
-  </footer>
+    <div class="background">
+      <!-- background text goes here -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores dLorem ipsum dolor sit amet consectetur adipisicing
+      elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+      sit amet consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius
+      quisquam est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate
+      aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem.eleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem.Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam
+      est ea aut hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur
+      dolores fugit voluptatem. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quia facere a ullam rem culpa. Eius quisquam est ea aut
+      hic iste asperiores deleniti? Nam quaerat cupiditate aspernatur dolores
+      fugit voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quia facere a ullam rem culpa. Eius quisquam est ea aut hic iste
+      asperiores deleniti? Nam quaerat cupiditate aspernatur dolores fugit
+      voluptatem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+      facere a ullam rem culpa. Eius quisquam est ea aut hic iste asperiores
+      deleniti? Nam quaerat cupiditate aspernatur dolores fugit voluptatem.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facere a
+      ullam rem culpa. Eius quisquam est ea aut hic iste asperiores deleniti?
+      Nam quaerat cupiditate aspernatur dolores fugit voluptatem. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quia facere a ullam rem
+      culpa. Eius quisquam est ea aut hic iste asperiores deleniti? Nam quaerat
+      cupiditate aspernatur dolores fugit voluptatem.
+    </div>
 
-
-<!-- remember to type module here -->
+    <footer class="footer">
+      <div class="footer-contents">
+        <div>Made by Paul Hardman 2022</div>
+        <ul>
+          <a
+            href="https://www.linkedin.com/in/paul-hardman-1199b6108/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/singapaul" target="_blank">Github</a>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <!-- remember to type module here -->
   <script type="module" src="morse.js"></script>
-</body>
-
 </html>

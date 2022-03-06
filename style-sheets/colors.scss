@@ -1,0 +1,113 @@
+.morseCodeContainer {
+  h1 {
+    font-family: "Special Elite", cursive;
+  }
+  background-color: white;
+
+  &__inputField {
+    font-family: "Special Elite", cursive;
+  }
+
+  &__submit,
+  &__reset {
+    background-color: white;
+    font-family: "Special Elite", cursive;
+  }
+
+
+  &__submit:hover {
+    background-color: #c2c2c2;
+  }
+  &__reset:hover {
+    background-color: #c2c2c2;
+  }
+
+  &__display {
+    font-family: "Special Elite", cursive;
+  }
+}
+
+.morseCodeContainer__Decrypt {
+  background: white;
+
+  font-family: "Special Elite", cursive;
+}
+
+.morseCodeContainer__Decrypt:hover {
+  background-color: #c2c2c2;
+}
+
+.footer {
+  &-contents {
+    ul a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+// styling the second box
+.MorseToEnglishBox {
+  h1 {
+    font-family: "Special Elite", cursive;
+  }
+  background-color: white;
+
+  &__inputField {
+    font-family: "Special Elite", cursive;
+  }
+
+  &__submit {
+    font-family: "Special Elite", cursive;
+    background: white;
+  }
+
+  &__submit:hover {
+    background-color: #c2c2c2;
+  }
+
+  #MorseToEnglishBox__reset {
+    font-family: "Special Elite", cursive;
+    grid-area: 1/2/2/3;
+    background: white;
+  }
+
+  #MorseToEnglishBox__reset:hover {
+    background-color: #c2c2c2;
+  }
+
+  &__display {
+    background-color: white;
+    border: dashed 2px grey;
+    font-family: "Special Elite", cursive;
+  }
+
+  &__encrypt {
+    font-family: "Special Elite", cursive;
+    background: white;
+  }
+
+  &__encrypt:hover {
+    background-color: #c2c2c2;
+  }
+}
+
+.footer {
+  &-contents {
+    background-color: white;
+    font-family: "Special Elite", cursive;
+
+    ul a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  width: 90%;
+}
+
+// the offscreen toggle
+.background {
+  font-family: "Special Elite", cursive;
+  opacity: 0.4;
+}
