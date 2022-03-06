@@ -1,5 +1,4 @@
 import { dictionary } from "./objects/dictionary.js";
-
 import { MORSE_CODE } from "./objects/dictionary.js";
 
 // This line will remove any spaces and replace with a /
